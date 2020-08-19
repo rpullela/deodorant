@@ -1,4 +1,4 @@
 export const sanityConfig = {
-  projectId: 'PROJECT_ID',
-  dataset: 'DATASET_ID',
+  projectId: 'ca1h3hux',
+  dataset: 'production',
 };
