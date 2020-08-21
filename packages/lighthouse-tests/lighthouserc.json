@@ -5,6 +5,8 @@
 				"http://localhost/",
 				"http://localhost/search-results/",
 				"http://localhost/how-to-do-a-dutch-braid-in-six-easy-steps/",
+				"http://localhost/20-best-box-braids-bob-styles-to-try-in-2020/",
+				"http://localhost/white-hair-causes-and-how-to-deal-with-them/",
 				"http://localhost/about-us/"
 			],
 			"staticDistDir": "packages/web/public"
