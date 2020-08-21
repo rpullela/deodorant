@@ -4,7 +4,8 @@
 			"url": [
 				"http://localhost/",
 				"http://localhost/search-results/",
-				"http://localhost/how-to-do-a-dutch-braid-in-six-easy-steps/"
+				"http://localhost/how-to-do-a-dutch-braid-in-six-easy-steps/",
+				"http://localhost/about-us/"
 			],
 			"staticDistDir": "packages/web/public"
 		},
