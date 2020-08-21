@@ -31,15 +31,6 @@ export default {
         })
     },
     {
-      title: 'Pinterest Channel',
-      name: 'pinteresturl',
-      type: 'url',
-      validation: Rule =>
-        Rule.uri({
-          scheme: ['http', 'https', 'mailto', 'tel']
-        })
-    },
-    {
       title: 'Instagram Channel',
       name: 'instaurl',
       type: 'url',

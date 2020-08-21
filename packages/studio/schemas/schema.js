@@ -37,6 +37,7 @@ import sliderType from './documents/sliderType'
 import articleSlider from './documents/articleSlider'
 import productSlider from './documents/productSlider'
 import navBar from './documents/navBar'
+import socialBlock from './documents/socialBlock'
 
 // Object types
 import navLink from './objects/navLink'
@@ -101,10 +102,10 @@ export default createSchema({
     textBlock,
     tool,
     author,
-
     navLink,
     navItem,
     navBar,
+    socialBlock,
 
     // Objects
     articlePortableText,

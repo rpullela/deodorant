@@ -1,0 +1,32 @@
+.social-menu-section {
+  height: 56px;
+}
+
+.social-menu-icons {
+  float: right;
+  padding: 10px;
+
+  svg {
+    fill: var(--grey-light-color);
+  }
+}
+
+.social-menu-text {
+  float: left;
+  margin-right: 15px;
+  color: var(--grey-light-color);
+}
+
+.social-menu-container {
+  float: right;
+}
+
+.social-menu-p0 {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .social-menu-p0 {
+    padding-right: 10px;
+  }
+}

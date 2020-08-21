@@ -12,7 +12,7 @@
 
     &::before {
       content: "";
-      background: #f8e6de;
+      background: var(--quaternary-color);
       position: absolute;
       right: 0;
       top: 0;
@@ -46,7 +46,7 @@
   }
 
   &_icon {
-    background-color: #b8f0c0;
+    background-color: var(--secondary-color);
     border-radius: 200%;
     width: 70px;
     height: 70px;

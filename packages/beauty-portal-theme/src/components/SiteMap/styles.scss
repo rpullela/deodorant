@@ -7,7 +7,7 @@
 
     &::before {
       content: "";
-      background: #b8f0c0;
+      background: var(--secondary-color);
       position: absolute;
       right: 0;
       bottom: 0;

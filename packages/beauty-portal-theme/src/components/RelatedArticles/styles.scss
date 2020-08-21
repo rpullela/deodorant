@@ -60,7 +60,7 @@
     margin-bottom: 5px;
     display: block;
     text-transform: uppercase;
-    color: #2c5270;
+    color: var(--quinary-color);
     font-size: .625rem;
     font-weight: 600;
     line-height: 1.1;
@@ -112,7 +112,7 @@
       position: absolute;
       top: 0;
       background-color: white;
-      color: #2c5270;
+      color: var(--quinary-color);
       font-size: .75rem;
       font-weight: 600;
       letter-spacing: 1px;
@@ -172,7 +172,7 @@
 
     &::before {
       content: "";
-      background: #b8f0c0;
+      background: var(--secondary-color);
       position: absolute;
       left: 0;
       top: 0;

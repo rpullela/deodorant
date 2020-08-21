@@ -34,8 +34,9 @@
     width: 160px;
     height: 50px;
     cursor: pointer;
-    background-color: var(--primary-color, #ff5c85);
-    color: black;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: white;
     position: relative;
     transform: perspective(1px) translateZ(0);
     display: flex;
@@ -51,7 +52,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: black;
+      background: white;
       transform: scaleX(0);
       transform-origin: 0 50%;
       transition-property: transform;
@@ -60,7 +61,7 @@
     }
 
     &:hover {
-      color: white;
+      color: var(--primary-color);
 
       &::before {
         transform: scaleX(1);

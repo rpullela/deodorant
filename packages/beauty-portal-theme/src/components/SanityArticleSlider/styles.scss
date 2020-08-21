@@ -1,5 +1,14 @@
 .bp-theme {
   &_primary {
-    background-color: #b8f0c0;
+    background: white;
   }
+}
+
+.hero {
+  background: linear-gradient(
+    to bottom right,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--tertiary-color)
+  );
 }

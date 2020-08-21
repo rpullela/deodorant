@@ -128,7 +128,6 @@ export const query = graphql`
       ...FeatureFieldsFull
     }
     brandInfo: sanityBrandInfo {
-      pinteresturl
       twitterurl
       youtubeurl
       facebookurl

@@ -20,7 +20,7 @@
       z-index: -1;
       bottom: 0;
       left: -.625rem;
-      background: var(--secondary-color, #b8f0c0);
+      background: var(--secondary-color, var(--secondary-color));
     }
   }
 
@@ -53,7 +53,7 @@
   }
 
   &_link {
-    color: var(--black-color);
+    color: black;
     display: block;
 
     font-size: 1.875rem;
@@ -106,7 +106,7 @@
     margin-bottom: 8px;
     margin-right: 8px;
     text-transform: uppercase;
-    color: #2c5270;
+    color: var(--quinary-color);
     display: block;
   }
 }

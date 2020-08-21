@@ -36,6 +36,7 @@ const BackToTop: FunctionComponent = () => {
       onClick={handleClick}
     >
       <ArrowUp />
+      <span className="bg-backToTop_label">Back To Top</span>
       <span className="srOnly">Top</span>
     </a>
   );

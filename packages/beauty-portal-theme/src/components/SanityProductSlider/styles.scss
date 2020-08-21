@@ -1,7 +1,26 @@
 .bp-productSlider {
   padding: 0 0 20px;
+  background: var(--quaternary-color);
 
   @media (min-width: 768px) {
     padding: 40px 0;
+  }
+}
+
+.bp-background-wave {
+  &_container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

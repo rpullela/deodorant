@@ -1,16 +1,18 @@
 .bp-backToTop {
-  background-color: var(--primary-color, #ff5c85);
+  background-color: var(--primary-color);
   border: none;
-  color: black;
+  color: white;
+  font-weight: 900;
   position: fixed;
-  width: 45px;
+  width: 130px;
   height: 45px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   right: 15px;
   bottom: 20px;
   z-index: 2;
+  border: 2px solid var(--primary-color);
   transform: perspective(1px) translateZ(0) translateX(100px);
   transition: all .5s;
 
@@ -23,7 +25,7 @@
     right: 0;
     bottom: 0;
     height: auto;
-    background: black;
+    background: white;
     transform: scaleY(0);
     transform-origin: 0 100%;
     transition-property: transform;
@@ -32,19 +34,20 @@
   }
 
   svg {
-    fill: black;
+    fill: white;
     width: 24px;
     height: 24px;
     transition: all .5s;
   }
 
   &:hover {
+    color: var(--primary-color);
     &::before {
       transform: scaleY(1);
     }
 
     svg {
-      fill: var(--primary-color, #ff5c85);
+      fill: var(--primary-color);
     }
   }
 

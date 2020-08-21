@@ -6,6 +6,7 @@ import SanityTextBlock from '../SanityTextBlock';
 import NewsletterBlock from '../NewsletterBlock';
 import SanityVideoBlock from '../SanityVideoBlock';
 import ImageBlock from '../ImageBlock';
+import SocialBlock from '../SocialBlock';
 
 const componentsMap = {
   SanityArticleSlider: SanityArticleSlider,
@@ -14,6 +15,7 @@ const componentsMap = {
   SanityNewsletterBlock: NewsletterBlock,
   SanityVideoBlock: SanityVideoBlock,
   SanityImageBlock: ImageBlock,
+  SanitySocialBlock: SocialBlock
 };
 
 const LandingSectionRenderer: FunctionComponent<LandingSectionRendererInterface> = ({

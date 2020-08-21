@@ -1,5 +1,5 @@
 .bp-footer {
-  background: black;
+  background: var(--grey-dark-color);
   transition: color 0.25s ease-out 0s;
   font-size: 0.775rem;
   display: flex;
@@ -48,19 +48,23 @@
     font-weight: 700;
     line-height: 1.6;
 
+    &:hover {
+      color: var(--primary-color);
+    }
+
     @media (min-width: 991px) {
       font-size: 1.125rem;
     }
 
     svg {
       margin-left: 4px;
-      fill: #b8f0c0;
+      fill: var(--secondary-color);
     }
   }
 
   &_secondary {
     text-align: center;
-    background-color: #333;
+    background-color: var(--grey-dark-color);
     color: white;
     display: flex;
     align-items: center;
@@ -89,6 +93,6 @@
   }
 
   svg {
-    fill: #fff;
+    fill: var(--grey-light-color);
   }
 }

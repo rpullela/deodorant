@@ -17,8 +17,12 @@
     display: block;
 
     &:hover {
-      h3>span {
-        background-image: linear-gradient(120deg, #b8f0c0 0%, #b8f0c0 100%);
+      h3 > span {
+        background-image: linear-gradient(
+          120deg,
+          var(--secondary-color) 0%,
+          var(--secondary-color) 100%
+        );
       }
 
       .icon:before {
@@ -40,7 +44,7 @@
   }
 
   &_headline {
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: black;
     margin: 0;
@@ -52,10 +56,14 @@
     }
 
     span {
-      transition: all .15s;
-      background-image: linear-gradient(120deg, rgba(184, 240, 192, 0) 0%, rgba(184, 240, 192, 0) 100%);
+      transition: all 0.15s;
+      background-image: linear-gradient(
+        120deg,
+        rgba(184, 240, 192, 0) 0%,
+        rgba(184, 240, 192, 0) 100%
+      );
       background-repeat: no-repeat;
-      background-size: 100% .1875rem;
+      background-size: 100% 0.1875rem;
       background-position: 0 100%;
     }
   }
@@ -65,10 +73,10 @@
     top: 0;
     left: 0;
     background-color: white;
-    font-size: .625rem;
+    font-size: 0.625rem;
     font-weight: 600;
     line-height: 1.1;
-    color: #2c5270;
+    color: var(--quinary-color);
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 5px;
@@ -78,7 +86,7 @@
     letter-spacing: 1px;
 
     @media (min-width: 768px) {
-      font-size: .75rem;
+      font-size: 0.75rem;
       padding: 6px;
     }
   }
@@ -86,9 +94,10 @@
   .icon-play {
     width: 2.5rem;
     height: 2.5rem;
-    bottom: .5rem;
-    left: .5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
     background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     position: absolute;
     display: flex;
     align-items: center;
@@ -97,14 +106,14 @@
     transform: perspective(1px) translateZ(0);
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: -1;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: black;
+      background: white;
       transform: scaleX(0);
       transform-origin: 0 50%;
       transition-property: transform;
@@ -115,7 +124,7 @@
     svg {
       width: 1.5rem;
       height: 1.5rem;
-      fill: white;
+      fill: var(--primary-color);
 
       @media (min-width: 768px) {
         width: 2rem;
@@ -126,8 +135,8 @@
     @media (min-width: 768px) {
       width: 3.25rem;
       height: 3.25rem;
-      bottom: .6875rem;
-      left: .6875rem;
+      bottom: 0.6875rem;
+      left: 0.6875rem;
     }
   }
 

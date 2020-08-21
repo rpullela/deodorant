@@ -24,7 +24,7 @@ const SanityVideoBlock: FunctionComponent<SanityVideoBlockInterface> = ({
             allowFullScreen
           ></iframe>
           <div className="bp-videoBlock_copy">
-            <h2 className="bp-videoBlock_name">{videoBlockName}</h2>
+            {/* <h2 className="bp-videoBlock_name">{videoBlockName}</h2> */}
             {_rawTextBlockBody && (
               <BlockContent
                 serializers={blockTypeDefaultSerializers}

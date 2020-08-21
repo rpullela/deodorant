@@ -8,7 +8,8 @@ import {
   MdImage,
   MdTextFields,
   MdViewCompact,
-  MdEmail
+  MdEmail,
+  MdFavorite
 } from 'react-icons/md'
 import { FaSitemap, FaTag, FaTags, FaBuffer, FaSlidersH, FaBoxes, FaGlobe } from 'react-icons/fa'
 import { GiSpray, GiCherish, GiHairStrands, GiStopSign } from 'react-icons/gi'
@@ -143,7 +144,13 @@ export default () =>
                 .title('Newsletter Block')
                 .icon(MdEmail)
                 .schemaType('newsletterBlock')
-                .child(S.documentTypeList('newsletterBlock').title('Newsletter Block'))
+                .child(S.documentTypeList('newsletterBlock').title('Newsletter Block')),
+              S.divider(),
+              S.listItem()
+                .title('Social Block')
+                .icon(MdFavorite)
+                .schemaType('socialBlock')
+                .child(S.documentTypeList('socialBlock').title('Social Block'))
             ])
         ),
       S.listItem()

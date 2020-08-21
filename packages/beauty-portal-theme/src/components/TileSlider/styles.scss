@@ -10,9 +10,11 @@
   &_header {
     display: flex;
     flex-direction: column;
+    margin-top: 24px;
     margin-bottom: 14px;
 
     @media (min-width: 768px) {
+      margin-top: 24px;
       margin-bottom: 24px;
       flex-direction: row;
       align-items: center;

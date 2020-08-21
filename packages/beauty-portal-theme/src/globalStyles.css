@@ -66,7 +66,7 @@ iframe {
 
 button:focus,
 a:focus {
-  outline: 2px dashed #b8f0c0;
+  outline: none;
 }
 
 figure {

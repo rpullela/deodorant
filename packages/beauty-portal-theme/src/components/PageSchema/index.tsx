@@ -36,7 +36,6 @@ const PageScheme = ({
           youtubeurl
           twitterurl
           title
-          pinteresturl
           facebookurl
           instaurl
           domainurl
@@ -54,7 +53,6 @@ const PageScheme = ({
   brandInfo.sameAs = [];
   brandInfo.youtubeurl && brandInfo.sameAs.push(brandInfo.youtubeurl);
   brandInfo.twitterurl && brandInfo.sameAs.push(brandInfo.twitterurl);
-  brandInfo.pinteresturl && brandInfo.sameAs.push(brandInfo.pinteresturl);
   brandInfo.facebookurl && brandInfo.sameAs.push(brandInfo.facebookurl);
   brandInfo.instaurl && brandInfo.sameAs.push(brandInfo.instaurl);
 

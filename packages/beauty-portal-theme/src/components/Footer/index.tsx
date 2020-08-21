@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import SocialMenu from '../SocialMenu';
 import './styles.scss';
 import BackToTop from '../BackToTop';
-// import { ReactComponent as UnileverLogo } from '../../images/unilever-logo.svg';
+import { ReactComponent as UnileverLogo } from '../../images/unilever-logo.svg';
 import { ReactComponent as NewWindow } from '../../images/icons/launch.svg';
 
 const Footer: FunctionComponent = () => {
@@ -23,7 +23,6 @@ const Footer: FunctionComponent = () => {
         }
       }
       brandInfo: sanityBrandInfo {
-        pinteresturl
         twitterurl
         youtubeurl
         facebookurl
@@ -71,7 +70,7 @@ const Footer: FunctionComponent = () => {
         </ul>
       </nav>
       <div className="bp-footer_secondary">
-        {/* <UnileverLogo /> */}
+        <UnileverLogo />
         <p>Copyright &copy; {new Date().getFullYear()} Unilever.</p>
       </div>
       <BackToTop />

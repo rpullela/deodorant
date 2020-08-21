@@ -166,6 +166,10 @@ export const query = graphql`
           name
         }
       }
+      ... on SanitySocialBlock {
+        id
+        title
+      }
     }
   }
 `;

@@ -1,7 +1,7 @@
 .bp-textBlock {
   padding-bottom: 16px;
   padding-top: 16px;
-  background-color: #f8e6de;
+  background-color: white;
   min-height: 212px;
 
   @media (min-width: 768px) {
@@ -24,10 +24,10 @@
   &_desc {
     text-align: center;
     margin: auto;
-    color: #333;
+    color: var(--gray-dark-color);
 
     p {
-      font-size: .875rem;
+      font-size: 0.875rem;
       margin: 0;
 
       @media (min-width: 768px) {
@@ -77,12 +77,12 @@
         position: absolute;
         top: -10px;
         left: 50%;
-        content: "";
+        content: '';
         background-image: url('./quote-left.svg');
         background-repeat: no-repeat;
         background-size: 30px 30px;
         background-position: center center;
-        background-color: #f8e6de;
+        background-color: white;
         height: 40px;
         width: 40px;
         transform: translateX(-50%);
@@ -91,22 +91,20 @@
 
       &::after {
         position: absolute;
-        content: "";
+        content: '';
         top: 8px;
         left: 50%;
         transform: translateX(-50%);
         width: 200px;
         height: 2px;
-        background-color: var(--primary-color, #ff5c85);
+        background-color: var(--primary-color);
         z-index: 0;
       }
     }
   }
 
   &.typea {
-    background-color: #f8e6de;
-
-    p {
+    background-color: white p {
       width: 80%;
       margin: auto;
     }
