@@ -7,15 +7,17 @@ import NewsletterBlock from '../NewsletterBlock';
 import SanityVideoBlock from '../SanityVideoBlock';
 import ImageBlock from '../ImageBlock';
 import SocialBlock from '../SocialBlock';
+import BannerBlock from '../BannerBlock';
 
 const componentsMap = {
+  SanityBannerBlock: BannerBlock,
   SanityArticleSlider: SanityArticleSlider,
   SanityProductSlider: SanityProductSlider,
   SanityTextBlock: SanityTextBlock,
   SanityNewsletterBlock: NewsletterBlock,
   SanityVideoBlock: SanityVideoBlock,
   SanityImageBlock: ImageBlock,
-  SanitySocialBlock: SocialBlock
+  SanitySocialBlock: SocialBlock,
 };
 
 const LandingSectionRenderer: FunctionComponent<LandingSectionRendererInterface> = ({

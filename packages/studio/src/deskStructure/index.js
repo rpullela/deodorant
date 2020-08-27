@@ -9,7 +9,8 @@ import {
   MdTextFields,
   MdViewCompact,
   MdEmail,
-  MdFavorite
+  MdFavorite,
+  MdVideoLibrary
 } from 'react-icons/md'
 import { FaSitemap, FaTag, FaTags, FaBuffer, FaSlidersH, FaBoxes, FaGlobe } from 'react-icons/fa'
 import { GiSpray, GiCherish, GiHairStrands, GiStopSign } from 'react-icons/gi'
@@ -107,6 +108,12 @@ export default () =>
                 .icon(FaSlidersH)
                 .schemaType('productSlider')
                 .child(S.documentTypeList('productSlider').title('Slider for products')),
+              S.divider(),
+              S.listItem()
+                .title('Banner Block')
+                .icon(MdVideoLibrary)
+                .schemaType('bannerBlock')
+                .child(S.documentTypeList('bannerBlock').title('Banner Block')),
               S.divider(),
               S.listItem()
                 .title('Text Block')
@@ -259,6 +266,11 @@ export default () =>
                         .icon(FaSlidersH)
                         .schemaType('sliderType')
                         .child(S.documentTypeList('sliderType').title('Slider Type')),
+                      S.listItem()
+                        .title('Banner Block Type')
+                        .icon(FaSlidersH)
+                        .schemaType('bannerBlockType')
+                        .child(S.documentTypeList('bannerBlockType').title('Banner Block Type')),
                       S.listItem()
                         .title('Text Block Type')
                         .icon(MdTextFields)

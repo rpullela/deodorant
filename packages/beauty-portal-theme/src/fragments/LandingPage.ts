@@ -141,6 +141,7 @@ export const query = graphql`
         id
         name
         _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
+
         textBlockType {
           name
         }
@@ -169,6 +170,30 @@ export const query = graphql`
       ... on SanitySocialBlock {
         id
         title
+      }
+      ... on SanityBannerBlock {
+        id
+        name
+        ctaLabel
+        ctaUrl
+        headline
+        subheading
+        _rawBody(resolveReferences: { maxDepth: 10 })
+        _rawImage(resolveReferences: { maxDepth: 10 })
+        videoBlock {
+          _type
+          url
+          youTubeCaption
+          heroImage {
+            asset {
+              url
+            }
+          }
+        }
+        type {
+          name
+          description
+        }
       }
     }
   }

@@ -37,6 +37,8 @@ import sliderType from './documents/sliderType'
 import articleSlider from './documents/articleSlider'
 import productSlider from './documents/productSlider'
 import navBar from './documents/navBar'
+import bannerBlock from './documents/bannerBlock'
+import bannerBlockType from './documents/bannerBlockType'
 import socialBlock from './documents/socialBlock'
 
 // Object types
@@ -98,6 +100,8 @@ export default createSchema({
     newsletterBlockType,
     beforeAfterImageBlock,
     beforeAfterImageBlockType,
+    bannerBlock,
+    bannerBlockType,
     tag,
     textBlock,
     tool,

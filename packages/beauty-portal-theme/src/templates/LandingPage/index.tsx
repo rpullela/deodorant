@@ -40,6 +40,15 @@ const LandingPage = (props: LandingPageProps) => {
         data={page}
       />
       <OGTags type={'page'} slug={page.path} data={page} />
+      {page.landingSections
+        .filter(section => section.__typename === 'SanityBannerBlock')
+        .map((section, index) => (
+          <LandingSectionRenderer
+            key={section.id}
+            section={section}
+            preferPerformance={index <= 1}
+          />
+        ))}
       {page.path !== '/' && <Breadcrumb pageTitle={page.name} />}
       {(page.headline || page._rawIntroduction) && (
         <div className="bp-container">
@@ -59,13 +68,15 @@ const LandingPage = (props: LandingPageProps) => {
           </div>
         </div>
       )}
-      {page.landingSections.map((section, index) => (
-        <LandingSectionRenderer
-          key={section.id}
-          section={section}
-          preferPerformance={index <= 1}
-        />
-      ))}
+      {page.landingSections
+        .filter(section => section.__typename !== 'SanityBannerBlock')
+        .map((section, index) => (
+          <LandingSectionRenderer
+            key={section.id}
+            section={section}
+            preferPerformance={index <= 1}
+          />
+        ))}
     </Layout>
   );
 };
