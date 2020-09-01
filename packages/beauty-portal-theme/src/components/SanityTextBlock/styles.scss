@@ -5,7 +5,6 @@
   min-height: 212px;
 
   @media (min-width: 768px) {
-    padding-bottom: 40px;
     padding-top: 40px;
   }
 
@@ -22,13 +21,15 @@
   }
 
   &_desc {
-    text-align: center;
+    text-align: left;
     margin: auto;
     color: var(--gray-dark-color);
+    margin-left: 5px;
 
     p {
-      font-size: 0.875rem;
       margin: 0;
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
 
       @media (min-width: 768px) {
         font-size: 1.125rem;
@@ -42,10 +43,12 @@
     h5,
     h6 {
       color: black;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
 
     blockquote {
@@ -103,7 +106,41 @@
     }
   }
 
+  &_cta-link {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  &_cta {
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    background-color: #4287f5;
+    color: white;
+    text-transform: uppercase;
+    padding: 9px 30px;
+    align-items: center;
+    justify-content: center;
+    transform: perspective(1px) translateZ(0);
+    background-size: 200% 100%;
+    transition: all 0.3s ease-out;
+    margin: auto;
+    &:hover {
+      background-color: #999;
+      color: white;
+      background-position: left bottom;
+    }
+  }
+
   &.typea {
+    // background: linear-gradient(
+    //   to bottom left,
+    //   var(--secondary-color),
+    //   var(--tertiary-color),
+    //   var(--quaternary-color)
+    // );
     background-color: white p {
       width: 80%;
       margin: auto;

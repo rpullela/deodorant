@@ -28,5 +28,18 @@
 @media (max-width: 768px) {
   .social-menu-p0 {
     padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .social-menu-container {
+    height: 56px;
+  }
+
+  .social-menu-text {
+    font-size: 0.7rem;
+  }
+
+  .social-menu-icons {
+    padding: 13px 0px 10px 0px;
   }
 }

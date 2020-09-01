@@ -1,4 +1,4 @@
-import {MdTextFields} from 'react-icons/md'
+import { MdTextFields } from 'react-icons/md'
 
 export default {
   name: 'textBlock',
@@ -27,6 +27,18 @@ export default {
       type: 'textBlockPortableText',
       title: 'Text Block',
       description: 'Add some rich text or quote'
+    },
+    {
+      name: 'ctaLabel',
+      type: 'string',
+      title: 'CTA Label',
+      description: 'Optional: Add catchy CTA Label for buttons'
+    },
+    {
+      name: 'ctaUrl',
+      type: 'string',
+      title: 'CTA URL',
+      description: 'Optional: Add a destination for your CTA'
     }
   ],
   preview: {

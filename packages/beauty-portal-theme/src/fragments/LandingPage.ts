@@ -149,6 +149,8 @@ export const query = graphql`
       ... on SanityTextBlock {
         id
         name
+        ctaLabel
+        ctaUrl
         _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
         textBlockType {
           name
