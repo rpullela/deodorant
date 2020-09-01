@@ -57,61 +57,65 @@ const Slider: FunctionComponent<SliderInterface> = ({
     return (
       <SwiperSlide key={slide.headline}>
         <div>
-          {slide._type && <span className="bp-slider_type">{slide._type}</span>}
           <Link className="bp-slider_link" to={slide.path}>
-            <div className="bp-slider_heroImage">
-              <figure>
-                {inView ? (
-                  <picture
-                    className="bp-image__placeholder"
-                    style={{
-                      paddingTop: '100%',
-                      background: `url(${slide._rawHeroImage.asset.metadata.lqip})`,
-                      backgroundSize: 'cover',
-                    }}
-                  >
-                    <source
-                      media="screen and (min-width: 560px)"
-                      srcSet={`${urlFor(slide._rawHeroImage)
-                        .width(280)
-                        .height(280)
-                        .fit('max')
-                        .auto('format')
-                        .url()
-                        .toString()}`}
-                    />
-                    <source
-                      media="screen and (min-width: 320px)"
-                      srcSet={`${urlFor(slide._rawHeroImage)
-                        .width(160)
-                        .height(160)
-                        .fit('max')
-                        .auto('format')
-                        .url()
-                        .toString()}`}
-                    />
-                    <img
-                      className="bp-slider_image"
-                      src={urlFor(slide._rawHeroImage)
-                        .width(280)
-                        .height(280)
-                        .fit('max')
-                        .url()}
-                      alt={slide.heroImage.alt}
-                    />
-                  </picture>
-                ) : null}
-              </figure>
-              {slide.heroVideo && (
-                <span className="icon icon-play">
-                  <PlayVideo />
-                  <span hidden>Play Video</span>
-                </span>
-              )}
+            <div>
+              <div className="bp-slider_heroImage">
+                <figure>
+                  {inView ? (
+                    <picture
+                      className="bp-image__placeholder"
+                      style={{
+                        paddingTop: '100%',
+                        background: `url(${slide._rawHeroImage.asset.metadata.lqip})`,
+                        backgroundSize: 'cover',
+                      }}
+                    >
+                      <source
+                        media="screen and (min-width: 560px)"
+                        srcSet={`${urlFor(slide._rawHeroImage)
+                          .width(280)
+                          .height(280)
+                          .fit('max')
+                          .auto('format')
+                          .url()
+                          .toString()}`}
+                      />
+                      <source
+                        media="screen and (min-width: 320px)"
+                        srcSet={`${urlFor(slide._rawHeroImage)
+                          .width(160)
+                          .height(160)
+                          .fit('max')
+                          .auto('format')
+                          .url()
+                          .toString()}`}
+                      />
+                      <img
+                        className="bp-slider_image"
+                        src={urlFor(slide._rawHeroImage)
+                          .width(280)
+                          .height(280)
+                          .fit('max')
+                          .url()}
+                        alt={slide.heroImage.alt}
+                      />
+                    </picture>
+                  ) : null}
+                </figure>
+                {slide.heroVideo && (
+                  <span className="icon icon-play">
+                    <PlayVideo />
+                    <span hidden>Play Video</span>
+                  </span>
+                )}
+              </div>
+              <div className="bp-slider_articleNav">Read more</div>
             </div>
-            <h3 className="bp-slider_caption">
-              <span>{slide.headline}</span>
-            </h3>
+            <div className="bp-slider_captionCard">
+              <h3 className="bp-slider_caption">
+                <span>{slide.headline}</span>
+              </h3>
+            </div>
           </Link>
         </div>
       </SwiperSlide>

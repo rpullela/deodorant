@@ -15,6 +15,7 @@ export const query = graphql`
         id
         name
         headline
+        _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
         searchCtaLabel
         searchTags {
           name
@@ -103,6 +104,14 @@ export const query = graphql`
         id
         name
         headline
+        _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
+        searchCtaLabel
+        searchTags {
+          name
+          tagCategory {
+            name
+          }
+        }
         slides {
           _type
           name

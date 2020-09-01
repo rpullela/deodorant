@@ -7,7 +7,11 @@ const SanityProductSlider: FunctionComponent<SanityProductSliderInterface> = ({
   name,
   slides,
   headline,
+  _rawTextBlockBody,
+  searchCtaLabel,
+  searchTags,
 }) => {
+  console.log(searchCtaLabel);
   return (
     <section className="bp-productSlider">
       <div style={{ height: '150px', overflow: 'hidden', margin: '-70px' }}>
@@ -24,7 +28,14 @@ const SanityProductSlider: FunctionComponent<SanityProductSliderInterface> = ({
       </div>
       <div className="bp-container">
         <div className="bp-background-wave">
-          <TileSlider name={name} slides={slides} headline={headline} />
+          <TileSlider
+            name={name}
+            slides={slides}
+            headline={headline}
+            _rawTextBlockBody={_rawTextBlockBody}
+            searchTags={searchTags}
+            searchCtaLabel={searchCtaLabel}
+          />
         </div>
       </div>
     </section>

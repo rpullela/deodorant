@@ -4,4 +4,5 @@ export interface ArticleTileSliderInterface {
   headline: string | null;
   searchCtaLabel: string;
   searchTags: any;
+  _rawTextBlockBody: any;
 }

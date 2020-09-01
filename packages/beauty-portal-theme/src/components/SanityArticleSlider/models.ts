@@ -5,4 +5,5 @@ export interface SanityArticleSliderInterface {
   slides: any;
   searchCtaLabel: string;
   searchTags: any;
+  _rawTextBlockBody: any;
 }

@@ -3,14 +3,19 @@ import { Link } from 'gatsby';
 import Slider from '../Slider';
 import { TileSliderInterface } from './models';
 import { getSearchUrlWithTagsAndCategory } from '../../helpers/searchUrl';
+import { blockTypeDefaultSerializers } from '../../helpers/sanity';
+import BlockContent from '@sanity/block-content-to-react';
 import './styles.scss';
 
 const TileSlider: FunctionComponent<TileSliderInterface> = ({
+  name,
   slides,
   headline,
   searchCtaLabel,
   searchTags,
+  _rawTextBlockBody,
 }) => {
+  console.log(searchCtaLabel);
   const breakpoints = {
     breakpoints: {
       768: {
@@ -26,15 +31,16 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
 
   return (
     <div className="bp-tileSlider">
+      <div className="section-divider"></div>
       <div className="bp-tileSlider_header">
         <h2 className="bp-tileSlider_title">{headline}</h2>
-        {searchCtaLabel && (
-          <Link
-            className="bp-tileSlider_link"
-            to={getSearchUrlWithTagsAndCategory(searchTags)}
-          >
-            {searchCtaLabel}
-          </Link>
+      </div>
+      <div className="bp-slider_tile-section-description">
+        {_rawTextBlockBody && (
+          <BlockContent
+            serializers={blockTypeDefaultSerializers}
+            blocks={_rawTextBlockBody}
+          />
         )}
       </div>
       <Slider
@@ -50,6 +56,16 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
         watchSlidesVisibility={true}
         breakpoints={breakpoints}
       />
+      <div className="bp-tileSlider_articleNav">
+        {searchCtaLabel && (
+          <Link
+            className="bp-tileSlider-link"
+            to={getSearchUrlWithTagsAndCategory(searchTags)}
+          >
+            {searchCtaLabel}
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
