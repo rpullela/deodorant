@@ -42,6 +42,7 @@ export default {
             { type: 'videoBlock' },
             { type: 'newsletterBlock' },
             { type: 'socialBlock' },
+            { type: 'formBlock' },
             { type: 'bannerBlock' }
           ]
         }

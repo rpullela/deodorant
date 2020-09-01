@@ -10,6 +10,7 @@ import {
   MdViewCompact,
   MdEmail,
   MdFavorite,
+  MdAssignment,
   MdVideoLibrary
 } from 'react-icons/md'
 import { FaSitemap, FaTag, FaTags, FaBuffer, FaSlidersH, FaBoxes, FaGlobe } from 'react-icons/fa'
@@ -157,7 +158,14 @@ export default () =>
                 .title('Social Block')
                 .icon(MdFavorite)
                 .schemaType('socialBlock')
-                .child(S.documentTypeList('socialBlock').title('Social Block'))
+                .child(S.documentTypeList('socialBlock').title('Social Block')),
+              S.divider(),
+              S.listItem()
+                .title('Form Block')
+                .icon(MdAssignment)
+                .schemaType('formBlock')
+                .child(S.documentTypeList('formBlock').title('Form Block')),
+              S.divider()
             ])
         ),
       S.listItem()
@@ -308,7 +316,12 @@ export default () =>
                         .schemaType('newsletterBlockType')
                         .child(
                           S.documentTypeList('newsletterBlockType').title('Newsletter Block Type')
-                        )
+                        ),
+                      S.listItem()
+                        .title('Form Block Type')
+                        .icon(MdAssignment)
+                        .schemaType('formBlockType')
+                        .child(S.documentTypeList('formBlockType').title('Form Block Type'))
                     ])
                 )
             ])

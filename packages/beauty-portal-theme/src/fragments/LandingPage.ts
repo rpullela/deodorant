@@ -150,7 +150,6 @@ export const query = graphql`
         id
         name
         _rawTextBlockBody(resolveReferences: { maxDepth: 10 })
-
         textBlockType {
           name
         }
@@ -180,6 +179,17 @@ export const query = graphql`
         id
         title
       }
+      ... on SanityFormBlock {
+        id
+        name
+        ctaLabel
+        headline
+        _rawBody(resolveReferences: { maxDepth: 10 })
+        _rawImage(resolveReferences: { maxDepth: 10 })
+        type {
+          name
+        }
+      }
       ... on SanityBannerBlock {
         id
         name
@@ -201,7 +211,6 @@ export const query = graphql`
         }
         type {
           name
-          description
         }
       }
     }

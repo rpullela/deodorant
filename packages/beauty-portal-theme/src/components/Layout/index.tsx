@@ -1,13 +1,15 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import classNames from 'classnames';
 import Header from '../Header';
 import Footer from '../Footer';
 import PageSchema from '../PageSchema';
 import './styles.scss';
+import AuthContext from 'src/contexts/AuthContext';
 
 const Layout = ({ className, children }: LayoutProps) => {
+  const [auth, setAuth] = useState(false);
   return (
-    <>
+    <AuthContext.Provider value={{ auth, setAuth }}>
       <a href="#main" className="bp-skipLink">
         <span>Skip to content</span>
       </a>
@@ -21,7 +23,7 @@ const Layout = ({ className, children }: LayoutProps) => {
         {children}
       </main>
       <Footer />
-    </>
+    </AuthContext.Provider>
   );
 };
 

@@ -1,13 +1,13 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useContext } from 'react';
 import { Link } from 'gatsby';
 import SiteNavigation from '../Navigation';
 import SiteSearch from './search';
 import { ReactComponent as UnileverLogo } from '../../images/unilever-logo.svg';
 import './styles.scss';
+import AuthContext from 'src/contexts/AuthContext';
 
 const Header: FunctionComponent = () => {
-  // TODO: integrate with authentication service
-  const auth = false;
+  const authContext = useContext(AuthContext);
 
   return (
     <header className="bp-header" role="banner" aria-label="header">
@@ -35,7 +35,7 @@ const Header: FunctionComponent = () => {
                 FAQs
               </Link>
               |{' '}
-              {auth ? (
+              {authContext.auth ? (
                 <Link to="/profile" className="bp-upper-nav_link">
                   Profile
                 </Link>
