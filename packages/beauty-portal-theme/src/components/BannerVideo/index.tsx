@@ -44,7 +44,6 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
   return (
     <section className="bp-bannervideo" data-cy="bannerVideoBlock">
       <Link to={url || '/'} className="bp-bannervideo_link">
-        <h2 className="bp-bannervideo_title">{videoBlock.youTubeCaption}</h2>
         <div className="bp-bannervideo_image" data-cy="bannerVideoImage">
           {!showVideo && (
             <figure>
