@@ -15,7 +15,6 @@ const TileSlider: FunctionComponent<TileSliderInterface> = ({
   searchTags,
   _rawTextBlockBody,
 }) => {
-  console.log(searchCtaLabel);
   const breakpoints = {
     breakpoints: {
       768: {

@@ -53,9 +53,11 @@ const BannerImage: FunctionComponent<BannerImageInterface> = ({
   );
 
   return (
-    <section>
+    <section data-cy="bannerImageBlock">
       <Link to={`${ctaUrl}` || '/'}>
-        <div className="bp-bannerImageBlock_image">{Image}</div>
+        <div className="bp-bannerImageBlock_image" data-cy="bannerImage">
+          {Image}
+        </div>
       </Link>
       {(headline || subheading || _rawBody) && (
         <div className="bp-bannerImageBlock_copy">

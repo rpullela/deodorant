@@ -42,10 +42,10 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
   const hideVideoCopy = showVideoCopy === false ? { display: 'none' } : {};
 
   return (
-    <section className="bp-bannervideo">
+    <section className="bp-bannervideo" data-cy="bannerVideoBlock">
       <Link to={url || '/'} className="bp-bannervideo_link">
         <h2 className="bp-bannervideo_title">{videoBlock.youTubeCaption}</h2>
-        <div className="bp-bannervideo_image ">
+        <div className="bp-bannervideo_image" data-cy="bannerVideoImage">
           {!showVideo && (
             <figure>
               <picture
@@ -108,9 +108,14 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
           </div>
         )}
         {ctaLabel && ctaUrl && (
-          <div className="bp-bannervideo_cta-link">
+          <div className="bp-bannervideo_cta-link" data-cy="bannerVideoLink">
             <Link to={ctaUrl || '/'}>
-              <button className="bp-bannervideo_cta">{ctaLabel}</button>
+              <button
+                className="bp-bannervideo_cta"
+                data-cy="bannerVideoButton"
+              >
+                {ctaLabel}
+              </button>
             </Link>
           </div>
         )}

@@ -32,7 +32,7 @@ const SocialMenu: FunctionComponent<SocialMenuInterface> = ({ links }) => {
   if (!links) return null;
 
   return (
-    <div className="bp-social">
+    <div className="bp-social" data-cy="socialMenu">
       <ul>{renderItems()}</ul>
     </div>
   );

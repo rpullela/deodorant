@@ -18,7 +18,7 @@ const SocialBlock: FunctionComponent<SocialBlockInterface> = ({ title }) => {
   `);
 
   return (
-    <section className="social-menu-section">
+    <section className="social-menu-section" data-cy="socialMenuBlock">
       <div className={classNames('container', 'social-menu-p0')}>
         <div className="social-menu-container">
           <p className="social-menu-text">{title}</p>

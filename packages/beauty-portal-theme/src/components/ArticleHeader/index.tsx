@@ -120,12 +120,13 @@ const ArticleHeader: FunctionComponent<ArticleHeaderInterface> = ({
   };
 
   return (
-    <div className="bp-articleHeader_header">
+    <div className="bp-articleHeader_header" data-cy="articleHeader">
       <h1
         className={classNames(
           'bp-articleHeader_title',
           type === 'gallery' ? 'txt-center' : null
         )}
+        data-cy="articleHeaderTitle"
       >
         {headline}
       </h1>
@@ -134,14 +135,18 @@ const ArticleHeader: FunctionComponent<ArticleHeaderInterface> = ({
           'bp-articleHeader_subTitle',
           type === 'gallery' ? 'txt-center' : null
         )}
+        data-cy="articleHeaderSubTitle"
       >
         {subheading}
       </p>
       <div className="bp-articleHeader_content">
-        <div className="bp-articleHeader_content-info">
+        <div
+          className="bp-articleHeader_content-info"
+          data-cy="articleHeaderInfo"
+        >
           {author && author.name && (
             <div className="bp-articleHeader_author">
-                <span className="bp-articleHeader_link">{author.name}</span>
+              <span className="bp-articleHeader_link">{author.name}</span>
             </div>
           )}
           <span className="divider">|</span>
@@ -195,7 +200,10 @@ const ArticleHeader: FunctionComponent<ArticleHeaderInterface> = ({
         </div>
       )}
       {(skillLevel || time) && (
-        <div className="bp-articleHeader_tutorial">
+        <div
+          className="bp-articleHeader_tutorial"
+          data-cy="articleHeaderTutorialInfo"
+        >
           {time && (
             <div className="bp-articleHeader_tutorial-info">
               <div>
