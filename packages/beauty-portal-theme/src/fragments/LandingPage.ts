@@ -209,6 +209,7 @@ export const query = graphql`
             asset {
               url
             }
+            alt
           }
         }
         type {
