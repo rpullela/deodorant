@@ -26,7 +26,7 @@ export default {
       name: 'headline',
       type: 'string',
       title: 'Headline',
-      description: 'Optional: Add catchy CTA headline)'
+      description: 'Optional: Add catchy CTA headline'
     },
     {
       name: 'subheading',
@@ -66,6 +66,12 @@ export default {
       type: 'youTube',
       title: 'Video Block',
       description: 'Optional: Add in your youTube video if required'
+    },
+    {
+      name: 'videoAsset',
+      type: 'videoAsset',
+      title: 'Uploaded video asset',
+      description: 'Optional: Add in your uploaded video asset if required'
     }
   ],
   preview: {

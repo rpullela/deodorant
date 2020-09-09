@@ -11,18 +11,6 @@ context("Banner Block", () => {
             .and("not.be.disabled");
         });
     });
-    it("Banner Video should be linked to a youtube video", () => {
-      cy.visit("")
-        .get("[data-cy=bannerVideoBlock]")
-        .should("be.visible")
-        .find("[data-cy=bannerVideoImage]")
-        .should("be.visible")
-        .within(() => {
-          cy.get("button")
-            .should("have.attr", "data-url")
-            .and("contain", "www.youtube.com");
-        });
-    });
   });
 
   describe("Banner Image tests", () => {

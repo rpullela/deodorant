@@ -54,6 +54,7 @@ import textBlockPortableText from './objects/textBlockPortableText'
 import step from './objects/step'
 import seo from './objects/seo'
 import productReference from './objects/productReference'
+import videoAsset from './objects/videoAsset'
 import youTube from './objects/youTube'
 import bioPortableText from './objects/bioPortableText'
 import authorBioPortableText from './objects/authorBioPortableText'
@@ -126,6 +127,7 @@ export default createSchema({
     authorBioPortableText,
     textBlockPortableText,
     landingpagesPortableText,
+    videoAsset,
     youTube,
     beforeAfterImage,
 

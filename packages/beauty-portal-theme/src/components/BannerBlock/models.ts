@@ -1,5 +1,6 @@
 export interface BannerBlockInterface {
   videoBlock: any;
+  videoAsset: any;
   type: any;
   id: string;
   name: string;

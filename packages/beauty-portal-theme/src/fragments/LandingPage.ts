@@ -211,6 +211,15 @@ export const query = graphql`
             }
           }
         }
+        videoAsset {
+          alt
+          videoUrl
+          video {
+            asset {
+              url
+            }
+          }
+        }
         type {
           name
         }
