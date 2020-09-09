@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import { BannerVideoAltInterface } from './models';
 import BlockContent from '@sanity/block-content-to-react';
 import { blockTypeDefaultSerializers } from '../../helpers/sanity';
-import { Player } from 'video-react';
 import './styles.scss';
 
 const BannerVideoAlt: FunctionComponent<BannerVideoAltInterface> = ({
@@ -21,18 +20,15 @@ const BannerVideoAlt: FunctionComponent<BannerVideoAltInterface> = ({
           to={videoAsset.videoUrl || '/'}
           className="bp-bannervideoalt_link"
         >
-          <Player
+          <video
             src={videoAsset.video.asset.url}
-            fluid={false}
-            type="video/mp4"
             width="auto"
             height="auto"
             autoPlay
             muted
             loop
-            controls="false"
+            preload="auto"
             className="video-alt_player"
-            alt={videoAsset.alt}
           />
         </Link>
       </div>
