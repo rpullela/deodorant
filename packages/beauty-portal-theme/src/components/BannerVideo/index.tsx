@@ -47,6 +47,18 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
         <div className="bp-bannervideo_image" data-cy="bannerVideoImage">
           {!showVideo && (
             <figure>
+              <link
+                rel="preload"
+                as="image"
+                href={`${urlFor(videoBlock.heroImage)
+                  .width(559)
+                  .height(314)
+                  .quality(80)
+                  .fit('max')
+                  .auto('format')
+                  .url()
+                  .toString()}`}
+              />
               <picture
                 className="bp-bannerimage__placeholder"
                 style={{
@@ -58,6 +70,8 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
                 <source
                   media="screen and (min-width: 1025px)"
                   srcSet={`${urlFor(videoBlock.heroImage)
+                    .width(665)
+                    .height(374)
                     .quality(80)
                     .fit('max')
                     .auto('format')
@@ -67,6 +81,8 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
                 <source
                   media="screen and (min-width: 560px)"
                   srcSet={`${urlFor(videoBlock.heroImage)
+                    .width(436)
+                    .height(245)
                     .quality(80)
                     .fit('max')
                     .auto('format')

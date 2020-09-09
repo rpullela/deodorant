@@ -32,6 +32,7 @@ const BannerVideoAlt: FunctionComponent<BannerVideoAltInterface> = ({
             loop
             controls="false"
             className="video-alt_player"
+            alt={videoAsset.alt}
           />
         </Link>
       </div>

@@ -48,6 +48,8 @@ const BannerImage: FunctionComponent<BannerImageInterface> = ({
             <source
               media="screen and (min-width: 1025px)"
               srcSet={`${urlFor(_rawImage)
+                .width(665)
+                .height(374)
                 .quality(80)
                 .fit('max')
                 .auto('format')
@@ -57,6 +59,8 @@ const BannerImage: FunctionComponent<BannerImageInterface> = ({
             <source
               media="screen and (min-width: 560px)"
               srcSet={`${urlFor(_rawImage)
+                .width(436)
+                .height(245)
                 .quality(80)
                 .fit('max')
                 .auto('format')
@@ -73,7 +77,16 @@ const BannerImage: FunctionComponent<BannerImageInterface> = ({
                 .url()
                 .toString()}`}
             />
-            <img src={urlFor(_rawImage).url()} alt={_rawImage.alt} />
+            <img
+              src={urlFor(_rawImage)
+                .width(436)
+                .height(245)
+                .quality(80)
+                .fit('max')
+                .auto('format')
+                .url()}
+              alt={_rawImage.alt}
+            />
           </picture>
         </>
       ) : null}
