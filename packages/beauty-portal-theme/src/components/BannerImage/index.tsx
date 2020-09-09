@@ -25,18 +25,6 @@ const BannerImage: FunctionComponent<BannerImageInterface> = ({
     <figure ref={ref} data-inview={inView}>
       {inView ? (
         <>
-          <link
-            rel="preload"
-            as="image"
-            href={`${urlFor(_rawImage)
-              .width(559)
-              .height(314)
-              .quality(80)
-              .fit('max')
-              .auto('format')
-              .url()
-              .toString()}`}
-          />
           <picture
             className="bp-image__placeholder"
             style={{

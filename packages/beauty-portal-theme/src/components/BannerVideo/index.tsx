@@ -47,18 +47,6 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
         <div className="bp-bannervideo_image" data-cy="bannerVideoImage">
           {!showVideo && (
             <figure>
-              <link
-                rel="preload"
-                as="image"
-                href={`${urlFor(videoBlock.heroImage)
-                  .width(559)
-                  .height(314)
-                  .quality(80)
-                  .fit('max')
-                  .auto('format')
-                  .url()
-                  .toString()}`}
-              />
               <picture
                 className="bp-bannerimage__placeholder"
                 style={{
