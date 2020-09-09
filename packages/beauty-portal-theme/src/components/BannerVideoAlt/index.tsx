@@ -10,7 +10,6 @@ const BannerVideoAlt: FunctionComponent<BannerVideoAltInterface> = ({
   videoAsset,
   subheading,
   headline,
-
   ctaLabel,
   ctaUrl,
   _rawBody,
@@ -24,7 +23,7 @@ const BannerVideoAlt: FunctionComponent<BannerVideoAltInterface> = ({
         >
           <Player
             src={videoAsset.video.asset.url}
-            fluid="false"
+            fluid={false}
             type="video/mp4"
             width="auto"
             height="auto"
