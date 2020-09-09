@@ -5,5 +5,4 @@ export interface BannerVideoInterface {
   _rawBody?: any;
   ctaLabel?: string;
   ctaUrl?: string;
-  url?: string;
 }

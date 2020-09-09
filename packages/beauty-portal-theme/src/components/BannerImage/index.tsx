@@ -45,6 +45,34 @@ const BannerImage: FunctionComponent<BannerImageInterface> = ({
               backgroundSize: 'cover',
             }}
           >
+            <source
+              media="screen and (min-width: 1025px)"
+              srcSet={`${urlFor(_rawImage)
+                .quality(80)
+                .fit('max')
+                .auto('format')
+                .url()
+                .toString()}`}
+            />
+            <source
+              media="screen and (min-width: 560px)"
+              srcSet={`${urlFor(_rawImage)
+                .quality(80)
+                .fit('max')
+                .auto('format')
+                .url()
+                .toString()}`}
+            />
+            <source
+              media="screen and (min-width: 320px)"
+              srcSet={`${urlFor(_rawImage)
+                .width(414)
+                .height(232)
+                .fit('max')
+                .auto('format')
+                .url()
+                .toString()}`}
+            />
             <img src={urlFor(_rawImage).url()} alt={_rawImage.alt} />
           </picture>
         </>

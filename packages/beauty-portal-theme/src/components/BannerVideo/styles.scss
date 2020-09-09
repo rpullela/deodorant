@@ -5,8 +5,7 @@
     var(--tertiary-color),
     var(--quaternary-color)
   );
-  padding-bottom: 10px;
-  margin-bottom: -10px;
+  padding-bottom: 1px;
   @media (min-width: 768px) {
     padding-bottom: 0;
     margin-bottom: 0;

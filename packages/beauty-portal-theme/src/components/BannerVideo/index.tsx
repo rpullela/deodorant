@@ -13,7 +13,6 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
   videoBlock,
   subheading,
   headline,
-  url,
   ctaLabel,
   ctaUrl,
   _rawBody,
@@ -43,7 +42,7 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
 
   return (
     <section className="bp-bannervideo" data-cy="bannerVideoBlock">
-      <Link to={url || '/'} className="bp-bannervideo_link">
+      <div onClick={playVideo} className="bp-bannervideo_link">
         <h2 className="bp-bannervideo_title">{videoBlock.youTubeCaption}</h2>
         <div className="bp-bannervideo_image" data-cy="bannerVideoImage">
           {!showVideo && (
@@ -56,8 +55,42 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
                   backgroundSize: 'cover',
                 }}
               >
+                <source
+                  media="screen and (min-width: 1025px)"
+                  srcSet={`${urlFor(videoBlock.heroImage)
+                    .quality(80)
+                    .fit('max')
+                    .auto('format')
+                    .url()
+                    .toString()}`}
+                />
+                <source
+                  media="screen and (min-width: 560px)"
+                  srcSet={`${urlFor(videoBlock.heroImage)
+                    .quality(80)
+                    .fit('max')
+                    .auto('format')
+                    .url()
+                    .toString()}`}
+                />
+                <source
+                  media="screen and (min-width: 320px)"
+                  srcSet={`${urlFor(videoBlock.heroImage)
+                    .width(414)
+                    .height(232)
+                    .fit('max')
+                    .auto('format')
+                    .url()
+                    .toString()}`}
+                />
                 <img
-                  src={urlFor(videoBlock.heroImage).url()}
+                  src={urlFor(videoBlock.heroImage)
+                    .width(436)
+                    .height(245)
+                    .quality(80)
+                    .fit('max')
+                    .auto('format')
+                    .url()}
                   alt={videoBlock.heroImage.alt}
                 />
               </picture>
@@ -91,7 +124,7 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
             ></iframe>
           )}
         </div>
-      </Link>
+      </div>
       <div style={hideVideoCopy}>
         {(headline || subheading || _rawBody) && (
           <div className="bp-bannervideo_copy">
