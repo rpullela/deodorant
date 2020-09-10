@@ -14,8 +14,8 @@ const BannerVideoAltControls: FunctionComponent<BannerVideoAltControlsInterface>
   _rawBody,
 }) => {
   return (
-    <section className="bp-bannervideoalt" data-cy="bannerVideoBlock">
-      <div className="video-alt">
+    <section className="bp-bannervideoaltcontrols" data-cy="bannerVideoBlock">
+      <div className="video-altcontrols">
         <video
           src={videoAsset.video.asset.url}
           width="auto"
@@ -24,13 +24,13 @@ const BannerVideoAltControls: FunctionComponent<BannerVideoAltControlsInterface>
           muted
           loop
           preload="auto"
-          className="video-alt_player"
+          className="video-altcontrols_player"
         />
       </div>
-      <div className="bp-bannervideoalt_optional">
+      <div className="bp-bannervideoaltcontrols_optional">
         {(headline || subheading || _rawBody) && (
-          <div className="bp-bannervideoalt_copy">
-            <h2 className="bp-bannervideoalt_heading">
+          <div className="bp-bannervideoaltcontrols_copy">
+            <h2 className="bp-bannervideoaltcontrols_heading">
               <span>{headline}</span>
             </h2>
             <h3>
@@ -43,10 +43,13 @@ const BannerVideoAltControls: FunctionComponent<BannerVideoAltControlsInterface>
           </div>
         )}
         {ctaLabel && ctaUrl && (
-          <div className="bp-bannervideoalt_cta-link" data-cy="bannerVideoLink">
+          <div
+            className="bp-bannervideoaltcontrols_cta-link"
+            data-cy="bannerVideoLink"
+          >
             <Link to={ctaUrl || '/'}>
               <button
-                className="bp-bannervideoalt_cta"
+                className="bp-bannervideoaltcontrols_cta"
                 data-cy="bannerVideoButton"
               >
                 {ctaLabel}
