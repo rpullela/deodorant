@@ -5,12 +5,14 @@ import BannerImage from '../BannerImage';
 import BannerVideo from '../BannerVideo';
 import BannerVideoAlt from '../BannerVideoAlt';
 import BannerVideoYouTube from '../BannerVideoYouTube';
+import BannerVideoAltControls from '../BannerVideoAltControls';
 
 const componentMap = {
   image: BannerImage,
   video: BannerVideo,
   videoAlt: BannerVideoAlt,
   videoYouTube: BannerVideoYouTube,
+  videoAltControls: BannerVideoAltControls,
   default: BannerImage,
 };
 
@@ -34,10 +36,12 @@ const BannerBlock: FunctionComponent<BannerBlockInterface> = ({
     bannerBlockName = type.name.toLowerCase();
     if (bannerBlockName.indexOf('hero image banner') >= 0) return 'image';
     if (bannerBlockName.indexOf('hero video banner') >= 0) return 'video';
-    if (bannerBlockName.indexOf('hero video alt banner') >= 0)
-      return 'videoAlt';
     if (bannerBlockName.indexOf('hero video youtube banner') >= 0)
       return 'videoYouTube';
+    if (bannerBlockName.indexOf('hero video alt banner') >= 0)
+      return 'videoAlt';
+    if (bannerBlockName.indexOf('hero video alt controls banner') >= 0)
+      return 'videoAltControls';
 
     return 'default';
   };
