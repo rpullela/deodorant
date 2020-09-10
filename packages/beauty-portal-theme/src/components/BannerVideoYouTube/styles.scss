@@ -1,0 +1,112 @@
+.video-altyoutube {
+  width: 100%;
+  order: 2;
+
+  &_player {
+    margin-top: 15px;
+    padding-top: 0 !important;
+    object-fit: cover;
+    width: 100%;
+    max-height: 320px;
+    min-height: 320px;
+
+    @media (min-width: 768px) {
+      max-height: 750px;
+
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}
+
+.bp-bannervideoyoutube {
+  padding-bottom: 10px;
+  margin-bottom: -25px;
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  &_copy {
+    padding: 18px;
+    padding-bottom: 70px;
+    margin-top: 15px;
+    background: white;
+    color: black;
+    order: 1;
+    position: relative;
+    opacity: 0.8;
+
+    @media (min-width: 768px) {
+      margin-top: -445px;
+      margin-bottom: 124px;
+      margin-left: 10px;
+      align-self: center;
+      padding: 24px;
+      right: -20px;
+      top: 0;
+      min-height: 310px;
+      max-height: 310px;
+      max-width: 650px;
+    }
+  }
+
+  &_heading {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+
+    span {
+      transition: 0.15s;
+      display: inline;
+      background-image: linear-gradient(
+        120deg,
+        rgba(184, 240, 192, 0) 0%,
+        rgba(184, 240, 192, 0) 100%
+      );
+      background-repeat: no-repeat;
+      background-size: 100% 0.1875rem;
+      background-position: 0 100%;
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 20px;
+      font-size: 2.25rem;
+    }
+  }
+
+  &_cta-link {
+    order: 1;
+    text-align: center;
+    margin-top: -71px;
+    margin-bottom: 27px;
+
+    @media (min-width: 768px) {
+      margin-top: -80px;
+      margin-bottom: 46px;
+    }
+  }
+
+  &_cta {
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: #4287f5;
+    color: white;
+    text-transform: uppercase;
+    padding: 9px 30px;
+    align-items: center;
+    justify-content: center;
+    transform: perspective(1px) translateZ(0);
+    background-size: 200% 100%;
+    transition: all 0.3s ease-out;
+    margin: auto;
+    &:hover {
+      background-color: #999;
+      color: white;
+      background-position: left bottom;
+    }
+  }
+}

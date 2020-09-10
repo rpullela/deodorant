@@ -4,11 +4,13 @@ import { BannerBlockInterface } from './models';
 import BannerImage from '../BannerImage';
 import BannerVideo from '../BannerVideo';
 import BannerVideoAlt from '../BannerVideoAlt';
+import BannerVideoYouTube from '../BannerVideoYouTube';
 
 const componentMap = {
   image: BannerImage,
   video: BannerVideo,
   videoAlt: BannerVideoAlt,
+  videoYouTube: BannerVideoYouTube,
   default: BannerImage,
 };
 
@@ -34,6 +36,8 @@ const BannerBlock: FunctionComponent<BannerBlockInterface> = ({
     if (bannerBlockName.indexOf('hero video banner') >= 0) return 'video';
     if (bannerBlockName.indexOf('hero video alt banner') >= 0)
       return 'videoAlt';
+    if (bannerBlockName.indexOf('hero video youtube banner') >= 0)
+      return 'videoYouTube';
 
     return 'default';
   };
