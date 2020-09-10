@@ -7,3 +7,8 @@
 # lerna files
 /lerna-debug.log
 /.idea
+
+# local accessibility pa11y tests
+/pa11yresult.html
+pa11y-ci-results.json
+

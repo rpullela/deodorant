@@ -208,6 +208,9 @@ export const query = graphql`
           heroImage {
             asset {
               url
+              metadata {
+                lqip
+              }
             }
           }
         }

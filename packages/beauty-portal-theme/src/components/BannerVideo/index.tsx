@@ -51,21 +51,22 @@ const BannerVideo: FunctionComponent<BannerVideoInterface> = ({
                 className="bp-bannerimage__placeholder"
                 style={{
                   paddingTop: `56.25%`,
-                  background: `url(${videoBlock.heroImage.asset.url})`,
+                  background: `url(${videoBlock.heroImage.asset.metadata.lqip})`,
                   backgroundSize: 'cover',
                 }}
               >
                 <source
                   media="screen and (min-width: 1025px)"
                   srcSet={`${urlFor(videoBlock.heroImage)
-                    .width(665)
-                    .height(374)
+                    .width(1440)
+                    .height(550)
                     .quality(80)
                     .fit('max')
                     .auto('format')
                     .url()
                     .toString()}`}
                 />
+
                 <source
                   media="screen and (min-width: 560px)"
                   srcSet={`${urlFor(videoBlock.heroImage)
