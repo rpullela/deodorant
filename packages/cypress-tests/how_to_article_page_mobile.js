@@ -1,18 +1,21 @@
-context('HowTo article tests', () => {
+context("HowTo article tests", () => {
   beforeEach(() => {
-    cy.viewport(375, 812) //iphone x
-    cy.visit('/hair-style/learning-how-to-french-twist-a-quick-step-by-step-tutorial/')
-  })
+    cy.viewport(375, 812); //iphone x
+    cy.visit("/learning-how-to-french-twist-a-quick-step-by-step-tutorial/");
+  });
 
-  describe('Hero slider', () => {
-    it('Hero slider is present and works properly', () => {
-      cy.get('main')
-      const $time = Cypress.$('div strong:contains("Time")')
-        cy.wrap($time)
-          .should('be.visible')
-
-    })
-
-  })
-
-})
+  describe("Article Header", () => {
+    it("Article Header is present and works properly", () => {
+      cy.get("main")
+        .wait(500)
+        .find("[data-cy=articleHeader]")
+        .should("be.visible");
+      cy.get("[data-cy=articleHeaderTitle]").should("be.visible");
+      cy.get("[data-cy=articleHeaderSubTitle]").should("be.visible");
+      cy.get("[data-cy=articleHeaderInfo]").should("be.visible");
+      cy.get("[data-cy=socialMenu]").should("be.visible");
+      cy.get("img").should("be.visible");
+      cy.get("[data-cy=articleHeaderTutorialInfo]").should("be.visible");
+    });
+  });
+});

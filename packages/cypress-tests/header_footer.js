@@ -1,93 +1,88 @@
-context('Header and Footer', () => {
+context("Header and Footer", () => {
   beforeEach(() => {
-    cy.visit('')
-  })
+    cy.visit("");
+  });
 
-  describe('Header tests', () => {
-    it('Header is present and has Navigation bar', () => {
-      cy.get('header')
-        .find('div')
+  describe("Header tests", () => {
+    it("Header is present and has Navigation bar", () => {
+      cy.get("header")
+        .find("div")
         .first()
-        .find('nav')
-        .should('be.visible')
-        .find('ul')
-        .should('contain', 'Home')
-        .and('be.visible')
-        .should('contain', 'Hair')
-        .and('be.visible')
-        .should('contain', 'Skin')
-        .and('be.visible')
-        .should('contain', 'Well Being')
-        .and('be.visible')
-        .should('contain', 'Product Showcase')
-        .and('be.visible')
-        .should('contain', 'Meet The Authors')
-        .and('be.visible')
-    })
-  })
+        .find("nav")
+        .should("be.visible")
+        .find("ul")
+        .should("contain", "Get Motivated")
+        .and("be.visible")
+        .should("contain", "Get Moving")
+        .and("be.visible")
+        .should("contain", "Get Mentored")
+        .and("be.visible")
+        .should("contain", "Get Confident")
+        .and("be.visible")
+        .should("contain", "Product")
+        .and("be.visible");
+    });
 
-  describe('Footer tests', () => {
-    it('Footer has Socials', () => {
-      cy.get('footer')
-        .find('div')
-        .first()
-        .find('ul')
-        .should('be.visible')
-        .find('li').within(() => {
-          cy.get('a')
-            .should('be.visible')
-            .should('have.attr', 'href')
-            .and('contain', 'https://www.pinterest.com/AllThingsHair/')
-          cy.get('a').eq(1)
-            .should('be.visible')
-            .should('have.attr', 'href')
-            .and('contain', 'https://twitter.com/AllThingsHairuk')
-          cy.get('a').eq(2)
-            .should('be.visible')
-            .should('have.attr', 'href')
-            .and('contain', 'https://www.youtube.com/user/allthingshairPH')
-          cy.get('a').eq(3)
-            .should('be.visible')
-            .should('have.attr', 'href')
-            .and('contain', 'https://www.facebook.com/AllThingsHairPH/')
-          cy.get('a').eq(4)
-            .should('be.visible')
-            .should('have.attr', 'href')
-            .and('contain', 'https://www.instagram.com/allthingshairuk/')
-        })
-    })
+    it("Header contains upper nav menu", () => {
+      cy.get("header")
+        .find("[data-cy=headerContent]")
+        .should("be.visible")
+        .find("[data-cy=upperNav]")
+        .should("be.visible")
+        .within(() => {
+          cy.get("[data-cy=contactUsLink]")
+            .should("contain", "Contact")
+            .should("have.attr", "href")
+            .and("contain", "/contact-us");
+          cy.get("[data-cy=aboutUsLink]")
+            .should("contain", "About Us")
+            .should("have.attr", "href")
+            .and("contain", "/about-us");
+          cy.get("[data-cy=faqsLink]")
+            .should("contain", "FAQs")
+            .should("have.attr", "href")
+            .and("contain", "/faqs");
+        });
+    });
 
-    it('Footer has Navigation bar', () => {
-      cy.get('footer')
-        .find('nav')
-        .find('ul')
-        .should('be.visible')
-        .find('li')
-        .should('contain', 'About Us')
-        .and('be.visible')
-        .should('contain', 'Privacy')
-        .and('be.visible')
-        .should('contain', 'Cookie Notice')
-        .and('be.visible')
-        .should('contain', 'Contact Us')
-        .and('be.visible')
-        .should('contain', 'Site Map')
-        .and('be.visible')
-        .should('contain', 'Terms of Use')
-        .and('be.visible')
-    })
+    it("Header has a visible logo", () => {
+      cy.get("header")
+        .find("[data-cy=logo]")
+        .should("be.visible")
+        .find("svg")
+        .should("be.visible");
+    });
+  });
 
-    it('Footer has Copyright', () => {
-      cy.get('footer')
-        .find('div')
+  describe("Footer tests", () => {
+    it("Footer has Navigation bar", () => {
+      cy.get("footer")
+        .find("nav")
+        .find("ul")
+        .should("be.visible")
+        .find("li")
+        .should("contain", "Sure Advanced Reference")
+        .and("be.visible")
+        .should("contain", "Privacy")
+        .and("be.visible")
+        .should("contain", "Cookie Notice")
+        .and("be.visible")
+        .should("contain", "Contact Us")
+        .and("be.visible")
+        .should("contain", "Site Map")
+        .and("be.visible")
+        .should("contain", "Terms of Use")
+        .and("be.visible");
+    });
+
+    it("Footer has Copyright", () => {
+      cy.get("footer")
+        .find("div")
         .last()
-        .should('be.visible')
-        .should('contain', 'Copyright')
-        .and('be.visible')
-        .should('contain', new Date().getFullYear())
-    })
-
-  })
-
-})
-
+        .should("be.visible")
+        .should("contain", "Copyright")
+        .and("be.visible")
+        .should("contain", new Date().getFullYear());
+    });
+  });
+});

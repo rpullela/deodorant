@@ -11,7 +11,6 @@ const SanityProductSlider: FunctionComponent<SanityProductSliderInterface> = ({
   searchCtaLabel,
   searchTags,
 }) => {
-  console.log(searchCtaLabel);
   return (
     <section className="bp-productSlider">
       <div style={{ height: '150px', overflow: 'hidden', margin: '-70px' }}>
