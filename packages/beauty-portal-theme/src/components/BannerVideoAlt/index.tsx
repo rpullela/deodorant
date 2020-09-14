@@ -29,7 +29,9 @@ const BannerVideoAlt: FunctionComponent<BannerVideoAltInterface> = ({
             loop
             preload="auto"
             className="video-alt_player"
-          />
+          >
+            <meta itemProp="description" content={videoAsset.alt}></meta>
+          </video>
         </Link>
       </div>
       <div className="bp-bannervideoalt_optional">

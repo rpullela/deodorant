@@ -25,7 +25,9 @@ const BannerVideoAltControls: FunctionComponent<BannerVideoAltControlsInterface>
           loop
           preload="auto"
           className="video-altcontrols_player"
-        />
+        >
+          <meta itemProp="description" content={videoAsset.alt}></meta>
+        </video>
       </div>
       <div className="bp-bannervideoaltcontrols_optional">
         {(headline || subheading || _rawBody) && (

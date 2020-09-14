@@ -206,6 +206,7 @@ export const query = graphql`
           url
           youTubeCaption
           heroImage {
+            alt
             asset {
               url
               metadata {
