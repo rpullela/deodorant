@@ -1,4 +1,4 @@
-import {GiSpray} from 'react-icons/gi'
+import { GiSpray } from 'react-icons/gi'
 
 export default {
   title: 'Product',
@@ -28,6 +28,12 @@ export default {
       description: 'Catchy Tag Line'
     },
     {
+      title: 'CTA description',
+      name: 'ctaDescription',
+      type: 'string',
+      description: 'Marketing description summary'
+    },
+    {
       name: 'image',
       title: 'Product Image',
       type: 'figure',
@@ -40,20 +46,34 @@ export default {
       name: 'marketingDescription',
       description: 'Marketing sales pitch like - Is it right for me?',
       type: 'array',
-      of: [{type: 'block'}]
+      of: [{ type: 'block' }]
     },
     {
       title: 'Usage Details',
       name: 'usageDetails',
-      description: 'Brief description of Top Tips and How To Use',
+      description: 'Brief description of How To Use',
       type: 'array',
-      of: [{type: 'block'}]
+      of: [{ type: 'block' }]
+    },
+    {
+      title: 'Recommendation Details',
+      name: 'recommendationDetails',
+      description: 'Brief description for Perfect For field',
+      type: 'array',
+      of: [{ type: 'block' }]
+    },
+    {
+      title: 'Suggestion Details',
+      name: 'suggestionDetails',
+      description: 'Brief description of Top Tips',
+      type: 'array',
+      of: [{ type: 'block' }]
     },
     {
       title: 'Ingredients',
       name: 'ingredients',
       type: 'array',
-      of: [{type: 'block'}]
+      of: [{ type: 'block' }]
     },
     {
       name: 'tags',
@@ -62,7 +82,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{type: 'tag'}]
+          to: [{ type: 'tag' }]
         }
       ],
       description: 'Select tags to meet customer needs - Best For'

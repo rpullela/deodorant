@@ -9,6 +9,8 @@ export const query1 = graphql`
     _rawIngredients(resolveReferences: { maxDepth: 10 })
     _rawMarketingDescription(resolveReferences: { maxDepth: 10 })
     _rawUsageDetails(resolveReferences: { maxDepth: 10 })
+    _rawRecommendationDetails(resolveReferences: { maxDepth: 10 })
+    _rawSuggestionDetails(resolveReferences: { maxDepth: 10 })
     buyNow
     name
     tags {
@@ -17,14 +19,8 @@ export const query1 = graphql`
         name
       }
     }
-    name
     tagLine
-    tags {
-      name
-      tagCategory {
-        name
-      }
-    }
+    ctaDescription
   }
 `;
 
