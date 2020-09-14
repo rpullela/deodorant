@@ -14,10 +14,10 @@
   z-index: 2;
   border: 2px solid var(--primary-color);
   transform: perspective(1px) translateZ(0) translateX(100px);
-  transition: all .5s;
+  transition: all 0.5s;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     top: 0;
@@ -37,7 +37,7 @@
     fill: white;
     width: 24px;
     height: 24px;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   &:hover {
